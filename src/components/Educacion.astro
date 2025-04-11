@@ -1,0 +1,209 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ImageUni from "/Users/christianlara/Desktop/Portafolio/Portfolio_ChristianLara/public/fesa.png";
+const certificaciones = [
+  {
+    id: 0,
+    nombre: "Programming Essentials in Python PCAP: Python Institute",
+    archivo: "/certificaciones/certPy.pdf",
+    imagen: "/certificaciones/imagenes/pythonn.jpg"
+  },
+  {
+    id: 1,
+    nombre: "Data Foundamentals - IBM",
+    archivo: "/certificaciones/js-avanzado-cert.pdf",
+    imagen: "/certificaciones/imagenes/data.jpg"
+  },
+  {
+    id: 2,
+    nombre: "Web3, Metaverso e IA generativa",
+    archivo: " ",
+    imagen: "/certificaciones/imagenes/ia.jpg"
+  },
+  {
+    id: 3,
+    nombre: "JavaScript Fundamentos",
+    archivo: " ",
+    imagen: "/certificaciones/imagenes/js.jpg"
+  },
+  {
+    id: 4,
+    nombre: "DataBase Foundations - Oracle",
+    archivo: " ",
+    imagen: "/certificaciones/imagenes/dfo.jpg"
+  }
+];
+---
+
+<Layout title="Educacion">
+
+    <section class="educacion overflow-hidden bg-black pt-14 pb-20" id="projects"> <!-- Reduje el pb-32 a pb-20 -->
+        <div class="self-stretch overflow-hidden flex flex-row items-center justify-center py-5 px-0 gap-[16px] ">
+            <h2 class=" text-white py-5 text-4xl font-bold sm:text-4xl md:text-5xl"><span class="edu text-5xl font-bold">EDUCACIÓN</span></h2>
+        </div>
+        <!-- project 02 -->
+        <div class="relative">
+            <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
+                <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+                    <div>
+                        <div class="mt-6">
+                            <h2 class="uni text-3xl font-bold tracking-tight text-white">
+                                UNAM - FES Aragón <br> Ingeniería en Computación
+                            </h2>
+                            <p class="mt-4 text-base text-black">
+                                Agosto 2022 - Diciembre 2026 <br>
+                                Actualmente estoy cursando el 6° semestre de la carrera. <br>
+                                Con 8.9 en promedio. <br>
+                                A través de la carrera he 
+                                desarrollado habilidades en Análisis de Datos, Programación Orientada a Objetos, 
+                                Estructura de Datos, Diseño y Análisis de Algoritmos, Base de Datos (Relacionales y no Relacionales),
+                                Sistemas Operativos, Programación Web, Diseño de Sistemas Lógicos, Metodologías Ágiles, y herramientas
+                                como Git, Github, Docker, y Linux.
+                            </p>
+                            <div class="mt-6">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <img class="social-icon" alt="read-more" src=" " />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-container mt-12 sm:mt-16 lg:mt-0">
+                    <div class="mt-12 sm:mt-16 lg:mt-0">
+                        <div class="mt-12 sm:mt-16 lg:mt-0 lg:flex lg:items-center">
+                            <div class="mx-4 md:mx-2 mt-5 lg:relative lg:m-0 lg:h-full lg:px-0 self-end">
+                                <img alt="Project 02" loading="lazy"
+                                    class="w-full max-w max-h-[600px] rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 
+                                        object-contain lg:h-auto lg:w-auto"
+                                    style="color:transparent" src={ImageUni.src}>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Certificaciones en un diseño tipo Bento Grid mejorado -->
+ <div class="max-w-5xl mx-auto px-6"> <!-- Aumenté a max-w-5xl -->
+    <h3 class="text-4xl mt-7 font-bold text-center mb-8 text-[#0032A0]">CERTIFICACIONES</h3>
+    <div class="grid grid-cols-3 gap-4 mx-auto" style="grid-template-rows: auto auto; width: 100%">
+        <!-- Certificación 0 -->
+        <a 
+            href={certificaciones[0].archivo || '#'} 
+            target="_blank"
+            class="col-span-2 row-span-1 rounded-md certificacion-item h-60" 
+        >
+            <img src={certificaciones[0].imagen} alt={certificaciones[0].nombre} class="w-fl h-full object-cover" />
+            <div class="certificacion-hover">
+                <h3 class="text-xl font-bold text-center p-4">{certificaciones[0].nombre}</h3> <!-- Texto un poco más grande -->
+            </div>
+        </a>
+        
+        <!-- Certificación 1 -->
+        <a 
+            href={certificaciones[1].archivo || '#'} 
+            target="_blank"
+            class="col-span-1 row-span-1 rounded-md certificacion-item h-60"
+        >
+            <img src={certificaciones[1].imagen} alt={certificaciones[1].nombre} class="w-full h-full object-cover" />
+            <div class="certificacion-hover">
+                <h3 class="text-xl font-bold text-center p-4">{certificaciones[1].nombre}</h3>
+            </div>
+        </a>
+        
+        <!-- Certificación 2 -->
+        <a 
+            href={certificaciones[2].archivo || '#'} 
+            target="_blank"
+            class="col-span-1 row-span-1 rounded-md certificacion-item h-60"
+        >
+            <img src={certificaciones[2].imagen} alt={certificaciones[2].nombre} class="w-full h-full object-cover" />
+            <div class="certificacion-hover">
+                <h3 class="text-xl font-bold text-center p-4">{certificaciones[2].nombre}</h3>
+            </div>
+        </a>
+        
+        <!-- Certificación 3 -->
+        <a 
+            href={certificaciones[3].archivo || '#'} 
+            target="_blank"
+            class="col-span-1 row-span-1 rounded-md certificacion-item h-60"
+        >
+            <img src={certificaciones[3].imagen} alt={certificaciones[3].nombre} class="w-full h-full object-cover" />
+            <div class="certificacion-hover">
+                <h3 class="text-xl font-bold text-center p-4">{certificaciones[3].nombre}</h3>
+            </div>
+        </a>
+        
+        <!-- Certificación 4 -->
+        <a 
+            href={certificaciones[4].archivo || '#'} 
+            target="_blank"
+            class="col-span-1 row-span-1 rounded-md certificacion-item h-60"
+        >
+            <img src={certificaciones[4].imagen} alt={certificaciones[4].nombre} class="w-full h-full object-cover" />
+            <div class="certificacion-hover">
+                <h3 class="text-xl font-bold text-center p-4">{certificaciones[4].nombre}</h3>
+            </div>
+        </a>
+    </div>
+</div>
+    </section>
+
+    <style>
+        .educacion {
+            background-color: #c0f4fc;
+            color: #0032A0;
+        }
+        .edu {
+            color: #0032A0;
+        }
+        .uni {
+            color: #0032A0;
+        }
+        .img-container {
+            margin-top: 90px;
+        }
+        .certificacion-item {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .certificacion-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .certificacion-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0032A0; /* Azul semitransparente */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .certificacion-item:hover .certificacion-hover {
+            opacity: 1;
+        }
+
+        .certificacion-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+
+
+</Layout>

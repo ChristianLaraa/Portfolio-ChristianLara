@@ -1,0 +1,122 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Foto from "public/chris.png";
+---
+
+<Layout title="Landing - Christian Lara">
+  <div class="landing">
+    <section
+      class="relative flex flex-col-reverse items-center max-w-screen-xl px-6 mx-auto md:flex-row md:py-[50px] md:px-20 gap-10"
+      id="hero"
+    >
+      <!-- Texto -->
+      <div class="md:w-6/12 space-y-8 text-left">
+        <div class="space-y-6">
+          <h2 class="text-6xl md:text-5xl font-light leading-tight py-3">
+            <span class="text-white">Holaa! soy <br /> </span>
+            <span class="font-extrabold">Christian Gael Lara Martínez</span>
+          </h2>
+
+          <h2 class="text-5xl md:text-4xl leading-tigh text-white">
+            Estudiante en <br />
+            <span class="text-white font-extrabold font-outline-sm md:font-outline">
+              Ingeniería en Computación
+            </span>
+          </h2>
+
+          <h2 class="text-3xl md:text-4xl font-semibold">
+            <span class="font-bold text-white">Soy</span> <span id="changing-word" class="highlight">creativo</span>
+          </h2>
+
+          <p class="text-white text-base md:text-base font-light leading-relaxed tracking-wide">
+            Soy una persona apasionada y creativa, con un enfoque innovador y versátil.
+            Mi experiencia combina habilidades técnicas sólidas con una perspectiva humana, lo que me permite diseñar soluciones que no solo son eficientes, sino también significativas para las personas.<br><br>
+            Disfruto explorar nuevas ideas, desarrollar proyectos que integren tecnología con creatividad, y colaborar en equipo para materializar visiones en proyectos funcionales y accesibles.
+          </p>
+        </div>
+
+        <!-- Social media icons -->
+        <div class="flex space-x-4 pt-4">
+          <a href="https://www.linkedin.com/in/christian-gael-lara-martinez-1252251bb/" class="w-12 h-12 flex justify-center items-center border-2 border-white rounded-full shadow-md hover:scale-110 transition">
+            <i class='bx bxl-linkedin text-2xl'></i>
+          </a>
+          <a href="https://github.com/ChristianLaraa" class="w-12 h-12 flex justify-center items-center border-2 border-white rounded-full shadow-md hover:scale-110 transition">
+            <i class='bx bxl-github text-2xl'></i>
+          </a>
+          <a href="mailto:christianlara225@aragon.unam.mx" class="w-12 h-12 flex justify-center items-center border-2 border-white rounded-full shadow-md hover:scale-110 transition">
+            <i class='bx bx-envelope text-2xl'></i>
+          </a>
+          <a href="public/CV_ChristianLara.pdf" class="flex items-center gap-2 px-4 py-2 border-2 border-white rounded-full shadow-md hover:scale-110 transition-transform duration-300">
+            <i class='bx bx-file text-2xl'></i>
+            <span class="text-white font-semibold">Descargar CV</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="md:w-6/12 flex justify-center md:justify-end -mt-6 md:mt-0">
+        <img
+          src="/chris.png"
+          alt="Foto de Christian Lara"
+          class="w-[350px] h-[350px] md:w-[420px] md:h-[420px] rounded-full shadow-2xl object-cover"
+        />
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .landing {
+      background: #0032A0;
+      color: #EDFF44;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Opcional: outline personalizado para Ingeniería */
+    .font-outline-sm {
+      -webkit-text-stroke: 1.2px white;
+      color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .font-outline {
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+      }
+    }
+
+    /* Estilos para el texto destacado */
+    .highlight {
+      color: #EDFF44;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .word-fade {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .word-fade.active {
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    const words = ["Creativo", "Analítico", "Desarrollador", "Artista", "Colaborador"];
+    const wordElement = document.getElementById("changing-word");
+    let index = 0;
+
+    function changeWord() {
+      wordElement.classList.remove("active");
+      setTimeout(() => {
+        index = (index + 1) % words.length;
+        wordElement.textContent = words[index];
+        wordElement.classList.add("active");
+      }, 500);
+    }
+
+    setInterval(changeWord, 2500); // cada 2.5 segundos
+    wordElement.classList.add("active"); // iniciar con fade-in
+  </script>
+
+</Layout>

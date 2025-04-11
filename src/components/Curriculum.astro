@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const sponsors = [
+  { category: "INTERN", name: "Warner Music México", logo: "/src/assets/logos/wmm.png", rol: "Next Gen - Analista de Datos. Analisis en Consumo y clusterización de Audiencias", url: "https://www.warnermusic.com.mx/" },
+  { category: "VOLUNTARIADO", name: "CNU - Centro de Negocios Universitarios, UNAM", logo: "/src/assets/logos/cnu.png", rol: "Desarrollador FullStack", url: "https://www.banamex.com/" },
+  { category: "VOLUNTARIADO", name: "DIMEI, (Semana DIMEI)", logo: "/src/assets/logos/dimei.png", rol: "Desarrollo de una plataforma de registro y acceso a las conferencias y eventos.", url: "https://www.ingenieria.unam.mx/dimei/" },
+  { category: "HACKATHONES", name: "Hackathon Banorte 2024", logo: "/src/assets/logos/banorte.png", rol: "Desarrollo de una IA en apoyo a la educacion financiera y transacciones de clientes.", url: "https://www.banorte.com/" },
+  { category: "HACKATHONES", name: "AngelHack Global", logo: "/src/assets/logos/hack.png", rol: "Desarrollo de una plataforma con IA que detecta FakeNews por medio de un link.", url: "https://angelhack.com/" },
+  { category: "ORGANIZACIONES", name: "University Esports", logo: "/src/assets/logos/esports.png", rol: "Parte de la comunidad, en donde me desarrollo en la difusión de eventos en mi universidad.",url: "https://universityesports.lat/" }
+];
+
+const categories = ["INTERN", "VOLUNTARIADO", "HACKATHONES", "ORGANIZACIONES"];
+---
+
+<Layout title="Currículum">
+  <section class="sponsors-section">
+    <h2 class="title text-5xl font-bold text-center mt-4 p-7 text-white py-5">¡GRACIAS POR CONFIAR EN MÍ!</h2>
+
+    <div class="sponsors-grid">
+      {categories.map((category) => (
+        <div class="category-group">
+          <h3 class="cat"> {category} </h3>
+          {sponsors
+            .filter((sponsor) => sponsor.category === category)
+            .map((sponsor) => (
+              <a href={sponsor.url} target="_blank" class="sponsor-card">
+                <img src={sponsor.logo} alt={sponsor.name} />
+                <p class="name text-orange">{sponsor.name}</p> <br /> <p>{sponsor.rol} </p><br>  
+              </a>
+            ))}
+        </div>
+      ))}
+    </div>
+  </section>
+
+
+  <style>
+{/* .curr {
+  background-color: #db1212;
+  padding: 3rem;
+} */}
+.sponsors-section {
+      background: #1864fc;
+      text-align: center;
+      padding: 40px;
+    }
+.cat {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+
+.sponsor-card {
+  background: #ff0404;
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribuye mejor el contenido */
+  transition: transform 0.2s ease-in-out;
+  text-decoration: none;
+  width: 300px;
+  min-height: 320px; /* Evita desbordes */
+  border: 3px solid white;
+  word-wrap: break-word; /* Evita que el texto se salga */
+  overflow: hidden; /* Previene desbordes inesperados */
+  text-align: center;
+}
+
+.sponsor-card img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.name {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.sponsor-card p {
+  color: white;
+  font-size: 1rem;
+  margin: 5px 0;
+  line-height: 1.2;
+}
+
+.sponsor-card:hover {
+  transform: scale(1.1);
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 110px; /* Mantiene separación original */
+  row-gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+</style>
+
+
+</Layout>
