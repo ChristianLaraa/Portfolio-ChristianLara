@@ -19,7 +19,7 @@ import { technologies, data } from '../assets/data';
           <div class="flex flex-wrap justify-center gap-6">
             {icons.map(icon => (
               <div class="relative group">
-                <img src={`public/icons/${folder}/${icon}.svg`} alt={icon} class="w-16 h-16 transition-transform transform hover:scale-110" />
+                <img src={`/icons/${folder}/${icon}.svg`} alt={icon} class="w-16 h-16 transition-transform transform hover:scale-110" />
                 <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 opacity-0 bg-gray-800 text-white text-xs rounded px-2 py-1 transition-opacity group-hover:opacity-100">{icon.toUpperCase()}</span>
               </div>
             ))}
