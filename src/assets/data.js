@@ -37,7 +37,7 @@ export const projects = [
       demo: 'https://christianlaraa.github.io/Desidia/MenuDesidia.html',
    },
    {
-      title: 'Analisis de moda emergente en México',
+      title: 'Analisis de moda emergente',
       description:
          'Proyecto de análisis de datos enfocado en identificar patrones y tendencias dentro de la industria de moda emergente en México. A través de herramientas de visualización y procesamiento de datos, se exploran aspectos como el crecimiento de marcas independientes, preferencias de consumo y cambios en la estética contemporánea. El proyecto permite observar el comportamiento del consumidor y su impacto cultural, apoyando la toma de decisiones estratégicas para emprendedores y diseñadores. Se utilizan herramientas de analisis, extraccion y visualizacion de datos, WebScrapping en tiendas en linea com Python, SQL para almacenamiento y consulta de datos, Python y Jupyter para Analisis y Tableau para visualización',
       image: 'image-ecommerce',
