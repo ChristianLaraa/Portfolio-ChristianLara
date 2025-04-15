@@ -13,14 +13,13 @@ import { technologies, data } from '../assets/data';
         { title: "Análisis de Datos", icons: ["excel", "mysql", "python", "powerbi", "tableau"], folder: "datos" },
         { title: "Desarrollo", icons: ["html", "css", "react", "astro", "nodejs", "tailwind"], folder: "dev" },
         { title: "Herramientas", icons: ["git", "github", "docker", "debian", "Figma"], folder: "tools" },
-        { title: "Soft Skills", icons: ["git", "github", "docker", "debian", "Figma"], folder: "tools" },
       ].map(({ title, icons, folder }) => (
         <div class="skill-card bg-white p-8 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 flex flex-col items-center">
           <h2 class="mb-6 text-2xl font-semibold">{title}</h2>
           <div class="flex flex-wrap justify-center gap-6">
             {icons.map(icon => (
               <div class="relative group">
-                <img src={`/src/components/icons/${folder}/${icon}.svg`} alt={icon} class="w-16 h-16 transition-transform transform hover:scale-110" />
+                <img src={`public/icons/${folder}/${icon}.svg`} alt={icon} class="w-16 h-16 transition-transform transform hover:scale-110" />
                 <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-8 opacity-0 bg-gray-800 text-white text-xs rounded px-2 py-1 transition-opacity group-hover:opacity-100">{icon.toUpperCase()}</span>
               </div>
             ))}
