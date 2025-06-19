@@ -40,7 +40,25 @@ export const projects = [
       title: 'Analisis de moda emergente',
       description:
          'Proyecto de análisis de datos enfocado en identificar patrones y tendencias dentro de la industria de moda emergente en México. A través de herramientas de visualización y procesamiento de datos, se exploran aspectos como el crecimiento de marcas independientes, preferencias de consumo y cambios en la estética contemporánea. El proyecto permite observar el comportamiento del consumidor y su impacto cultural, apoyando la toma de decisiones estratégicas para emprendedores y diseñadores. Se utilizan herramientas de analisis, extraccion y visualizacion de datos, WebScrapping en tiendas en linea com Python, SQL para almacenamiento y consulta de datos, Python y Jupyter para Analisis y Tableau para visualización',
-      image: 'image-ecommerce',
+      image: 'image-dataModa',
+      color: '#ff8023',
+      repo: 'https://github.com/ChristianLaraa/Data/tree/main/Proyecto2',
+      demo: '#',
+   },
+   {
+      title: 'NBA Stats',
+      description:
+         'Proyecto de análisis de datos enfocado en identificar patrones y tendencias dentro de la industria de moda emergente en México. A través de herramientas de visualización y procesamiento de datos, se exploran aspectos como el crecimiento de marcas independientes, preferencias de consumo y cambios en la estética contemporánea. El proyecto permite observar el comportamiento del consumidor y su impacto cultural, apoyando la toma de decisiones estratégicas para emprendedores y diseñadores. Se utilizan herramientas de analisis, extraccion y visualizacion de datos, WebScrapping en tiendas en linea com Python, SQL para almacenamiento y consulta de datos, Python y Jupyter para Analisis y Tableau para visualización',
+      image: 'image-nba',
+      color: '#ff8023',
+      repo: 'https://github.com/ChristianLaraa/Data/tree/main/Proyecto2',
+      demo: '#',
+   },
+   {
+      title: 'Registro de Usuarios',
+      description:
+         'Proyecto de análisis de datos enfocado en identificar patrones y tendencias dentro de la industria de moda emergente en México. A través de herramientas de visualización y procesamiento de datos, se exploran aspectos como el crecimiento de marcas independientes, preferencias de consumo y cambios en la estética contemporánea. El proyecto permite observar el comportamiento del consumidor y su impacto cultural, apoyando la toma de decisiones estratégicas para emprendedores y diseñadores. Se utilizan herramientas de analisis, extraccion y visualizacion de datos, WebScrapping en tiendas en linea com Python, SQL para almacenamiento y consulta de datos, Python y Jupyter para Analisis y Tableau para visualización',
+      image: 'image-web2',
       color: '#ff8023',
       repo: 'https://github.com/ChristianLaraa/Data/tree/main/Proyecto2',
       demo: '#',
@@ -49,7 +67,16 @@ export const projects = [
       title: 'Analisis de Consumo (PT) - Mercado Pago',
       description:
          'Este proyecto explora el comportamiento de consumo de los usuarios de Mercado Pago a partir del análisis de datos obtenidos mediante Python y herramientas estadísticas. Se identifican categorías de gasto, frecuencia de transacciones y patrones recurrentes que permiten comprender mejor la relación entre tecnología financiera y hábitos de consumo. Es una aproximación útil para empresas que buscan optimizar estrategias de marketing y fidelización. Se utiliza Excel, SQL, Python y PowerBi para el análisis y visualización de datos.',
-      image: 'image-facebook-clone',
+      image: 'image-mp',
+      color: '#1d80ff',
+      repo: 'https://github.com/ChristianLaraa/Data/tree/main/Proyecto3',
+      demo: '#',
+   },
+   {
+      title: 'Interprete de Lenguaje C',
+      description:
+         'Este proyecto explora el comportamiento de consumo de los usuarios de Mercado Pago a partir del análisis de datos obtenidos mediante Python y herramientas estadísticas. Se identifican categorías de gasto, frecuencia de transacciones y patrones recurrentes que permiten comprender mejor la relación entre tecnología financiera y hábitos de consumo. Es una aproximación útil para empresas que buscan optimizar estrategias de marketing y fidelización. Se utiliza Excel, SQL, Python y PowerBi para el análisis y visualización de datos.',
+      image: 'image-interpC',
       color: '#1d80ff',
       repo: 'https://github.com/ChristianLaraa/Data/tree/main/Proyecto3',
       demo: '#',
@@ -58,7 +85,7 @@ export const projects = [
       title: 'Landing Page - CNU, UNAM',
       description:
          'Diseño y desarrollo de la landing page oficial del Centro de Negocios Universitarios (CNU), una organización estudiantil de la UNAM. El sitio transmite profesionalismo, dinamismo y comunidad, alineado con la identidad visual del CNU. Fue desarrollado con HTML, CSS y JavaScript, optimizado para ser responsivo y fácilmente mantenible. La página cumple funciones de presentación institucional, convocatoria a eventos y contacto. Prototipado en HTML, CSS y JS, se realizan mejoras continuas en pro de la organización implementando tecnologias como Astro, Tailwind y React',
-      image: 'image-cnu',
+      image: 'image-cnu2',
       color: '#ff2a23',
       repo: 'https://github.com/ChristianLaraa/webPage_CNU',
       demo: 'https://centro-de-negocios-universitarios.github.io/webPage_CNU/',
@@ -73,11 +100,13 @@ export const projects = [
       demo: 'https://christianlaraa.github.io/ProyectoWeb1/',
    },
    {
-      title: 'Vinyl Beat - Tienda en Linea',
+      title: 'GuitarLA - Tienda en Linea',
       description:
          'Diseño de una tienda en línea ficticia especializada en vinilos, centrada en la experiencia del usuario y la presentación visual atractiva. La interfaz simula una tienda real con productos, sliders, y secciones promocionales. Está enfocada en prácticas de diseño responsivo y se convierte en una base ideal para futuras implementaciones con backend o pasarelas de pago. Desarrollada con React, CSS y TypeScript.',
-      image: 'image-slider',
+      image: 'image-guitarLA',
       color: '#bbbbbb',
+      repo: '',
+      demo: 'https://guitarla.vercel.app/',
    },
    {
       title: 'Cifrado de Textos',
@@ -128,6 +157,15 @@ export const projects = [
       description:
          'Herramienta digital desarrollada para calcular automáticamente los valores de resistencias y capacitores en circuitos eléctricos. Esta aplicación facilita el trabajo de estudiantes y profesionales de electrónica al simplificar los cálculos y mostrar resultados precisos de acuerdo con códigos de colores y fórmulas técnicas. Se enfoca en funcionalidad, precisión y accesibilidad. Desarrollado completamente en Python con ayuda de librerias para el desarrollo de interfaces graficas como Tkinter y PySimpleGUI, se implementa un diseño responsivo y amigable para el usuario.',
       image: 'image-calc',
+      color: '#74ffc2',
+      repo: 'https://github.com/ChristianLaraa/PF_EyM',
+      demo: ''
+   },
+      {
+      title: 'P. Webs WMM',
+      description:
+         'Herramienta digital desarrollada para crear presentaciones interactivas y dinámicas. Esta aplicación permite a los usuarios diseñar y personalizar presentaciones utilizando una variedad de plantillas, elementos multimedia y herramientas de colaboración. Se enfoca en la facilidad de uso y la accesibilidad, permitiendo a estudiantes y profesionales crear presentaciones atractivas sin necesidad de experiencia técnica previa. Desarrollado completamente en Python con ayuda de librerias para el desarrollo de interfaces graficas como Tkinter y PySimpleGUI, se implementa un diseño responsivo y amigable para el usuario.',
+      image: 'image-videogwmm',
       color: '#74ffc2',
       repo: 'https://github.com/ChristianLaraa/PF_EyM',
       demo: ''
