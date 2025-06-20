@@ -17,6 +17,9 @@ importers:
       '@fontsource/poppins':
         specifier: ^5.2.5
         version: 5.2.5
+      '@vercel/analytics':
+        specifier: ^1.5.0
+        version: 1.5.0
       astro:
         specifier: ^5.6.2
         version: 5.6.2(jiti@1.21.7)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1)
