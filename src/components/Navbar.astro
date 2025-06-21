@@ -2,52 +2,83 @@
 const { pathname } = Astro.url;
 
 import { socials, info } from '../assets/data';
+
+const navItems = [
+  { name: 'Inicio', href: '#home' },
+  { name: 'Proyectos', href: '#proyecto' },
+  { name: 'Contacto', href: '#contacto' },
+  { name: 'Blog', href: '#blog' }
+];
 ---
 
-<nav class="w-full h-16 bg-black text-white flex items-center px-4 py-3 fixed top-0 z-50 md:justify-between xs:justify-center">
-   <ul
-      class="justify-items-center xl:basis-[20%] md:basis-[28%] md:grid xs:hidden"
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 text-white shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-5 py-4">
+
+    <!-- Logo -->
+    <div class="text-xl font-bold tracking-wide">
+      <a href="#home" class="hover:opacity-90 duration-200">--</a>
+    </div>
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex space-x-8 font-semibold text-[17px]">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="nav1 opacity-80 hover:opacity-100 transition-opacity duration-300"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Socials (visible en md y más) -->
+    <ul
+      class="hidden md:grid grid-cols-4 gap-3 ml-6"
       style={{ gridTemplateColumns: `repeat(${socials.length}, minmax(0, 1fr))` }}
-   >
-      {
-         socials.map((social) => (
-            <li>
-               <a
-                  href="#"
-                  class="text-2xl opacity-50 hover:opacity-100 duration-300 ease-in cursor-pointer"
-               >
-                  <i class={social.logo} />
-               </a>
-            </li>
-         ))
-      }
-   </ul>
+    >
+      {socials.map((social) => (
+        <li>
+          <a
+            href={social.url || "#"}
+            class="nav1 text-2xl opacity-50 hover:opacity-100 duration-300"
+          >
+            <i class={social.logo}></i>
+          </a>
+        </li>
+      ))}
+    </ul>
 
-   <ul
-      class="ml-auto grid justify-items-center gap-x-3"
-      style={{ gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' }}
-   >
-      <li>
-         <a
-            class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
-            href="#home"
-         >
-            Inicio
-         </a>
-      </li>
+    <!-- Mobile menu toggle -->
+    <button id="menu-toggle" class="md:hidden text-2xl">
+      <i class="ri-menu-3-line"></i>
+    </button>
+  </div>
 
-      {
-         pathname === '/' &&
-            info.slice(0, 4).map((i) => (
-               <li>
-                  <a
-                     class="opacity-70 hover:opacity-100 duration-300 text-[17px] font-semibold"
-                     href={`#${i.text.toLowerCase()}`}
-                  >
-                     {i.text}
-                  </a>
-               </li>
-            ))
-      }
-   </ul>
+  <!-- Mobile Dropdown -->
+  <div id="mobile-menu" class="hidden flex-col md:hidden bg-black/80 px-5 pt-3 pb-5 text-sm space-y-3">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class="block opacity-80 hover:opacity-100 duration-300"
+      >
+        {item.name}
+      </a>
+    ))}
+  </div>
+
+  <script type="module">
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </nav>
+<style>
+   .nav1:hover {
+      color: #EDFF44;
+   }
+</style>

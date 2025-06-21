@@ -3,51 +3,57 @@ import Layout from "../layouts/Layout.astro";
 import FotoPerfil from "public/Chris2.png";
 ---
 <Layout title="Sobre Mí">
-    <div class="about" id="about">
-  <section class="text-white py-20">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center md:items-start gap-12">
-      
-      <!-- Imagen -->
-      <div class="w-full md:w-5/12 flex justify-center md:justify-start animate-float-up">
-        <div class="relative">
-          <img 
-            src="/Chris2.png" 
-            alt="Chris" 
-            class="rounded-xl w-72 md:w-96 shadow-2xl hover:scale-105 transition-transform duration-500 animate-subtle-float border-4 border-white"
-          />
+  <div class="about" id="about">
+    <section class="text-white py-20">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center md:items-start gap-10 lg:gap-16">
+
+        <!-- Imagen -->
+        <div class="w-full md:w-5/12 flex justify-center md:justify-start animate-float-up">
+          <div class="relative">
+            <img 
+              src="/Chris2.png" 
+              alt="Chris" 
+              class="rounded-xl w-64 sm:w-72 md:w-96 shadow-2xl hover:scale-105 transition-transform duration-500 animate-subtle-float border-4 border-white"
+            />
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="w-full md:w-7/12 text-left animate-fade-in">
+          <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white drop-shadow-lg">
+            <span class="bg-clip-text text-transparent bg-black font-extrabold">
+              Sobre mí
+            </span>
+          </h2>
+          <p class="mt-6 text-base sm:text-lg md:text-xl text-justify tracking-tight leading-relaxed">
+            Soy un <span class="font-semibold text-yellow-200">creativo</span> apasionado por dar vida a ideas a través del desarrollo. Me fascina todo el proceso: desde conceptualizar un modelo de negocio hasta construir una identidad visual sólida y funcional. Disfruto transformar conceptos en proyectos reales, donde lo técnico y lo visual se encuentran para crear experiencias memorables.
+            <br><br>
+            Me motiva profundamente el <span class="italic text-yellow-100">análisis de datos</span>. Lo veo como una herramienta poderosa para generar impacto en cualquier sector. Disfruto explorar información, descubrir patrones clave y darles una interpretación que pueda redefinir el rumbo de un proyecto.
+            <br><br>
+            Fuera del código, encuentro inspiración en todo lo que me rodea: la música, el cine, el deporte, el arte, la moda... Me encanta sumergirme en todo lo que me apasiona y entender los procesos creativos detrás de cada obra. Valoro mucho el tiempo con mi familia, amistades y personas cercanas que admiro profundamente.
+          </p>
         </div>
       </div>
+    </section>
+  </div>
 
-      <!-- Texto -->
-      <div class="w-full md:w-7/10 text-left animate-fade-in">
-        <h2 class="text-4xl sm:text-5xl font-extrabold leading-tight text-white drop-shadow-lg">
-          <span class="bg-clip-text text-transparent bg-black font-extrabold">
-            Sobre mí
-          </span>
-        </h2>
-        <p class="mt-6 text-lg sm:text-xl text-justify tracking-tight leading-relaxed">
-          Soy un <span class="font-semibold text-yellow-200">creativo</span> apasionado por dar vida a ideas a través del desarrollo. Me fascina todo el proceso: desde conceptualizar un modelo de negocio hasta construir una identidad visual sólida y funcional. Disfruto transformar conceptos en proyectos reales, donde lo técnico y lo visual se encuentran para crear experiencias memorables.
-           <span class="underline decoration-yellow-300"></span>Me encanta dar vida a proyectos.
-          <br><br>
-          Me motiva profundamente el <span class="italic text-yellow-100">analisis de datos</span> Lo veo como una herramienta poderosa para generar impacto en cualquier sector. Disfruto explorar información, descubrir patrones clave y darles una interpretación que pueda redefinir el rumbo de un proyecto. Para mí, los datos no solo cuentan una historia: la inspiran y la direccionan.
-          <br><br>
-          Fuera del código, encuentro inspiración en todo lo que me rodea: la música, el cine, el deporte, el arte, la moda... Me encanta sumergirme en todo el contenido que me apasiona y entender los procesos creativos detrás de cada obra. Valoro mucho el tiempo con mi familia, amistades y personas cercanas que admiro profundamente.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
   <style>
-        .about {
-            background-color: #ff5e00;
-            color: rgb(0, 0, 0);
-        }
+    .about {
+      background-color: #ff5e00;
+      color: rgb(0, 0, 0);
+    }
+
     .animate-fade-in {
       animation: fadeInUp 1s ease-out forwards;
     }
+
     .animate-float-up {
       animation: floatUp 1s ease-out forwards;
     }
+    .p{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     .animate-subtle-float {
       animation: subtleFloat 5s ease-in-out infinite;
     }
@@ -84,3 +90,4 @@ import FotoPerfil from "public/Chris2.png";
     }
   </style>
 </Layout>
+
